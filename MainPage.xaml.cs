@@ -1,24 +1,24 @@
-﻿namespace ChupyGPT
+﻿using Microsoft.Maui.Controls;
+
+namespace ChupyGPT
 {
 	public partial class MainPage : ContentPage
 	{
-		int count = 0;
-
 		public MainPage()
 		{
 			InitializeComponent();
 		}
 
-		private void OnCounterClicked(object sender, EventArgs e)
+		private async void OnJoinNowClicked(object sender, EventArgs e)
 		{
-			count++;
+			// Navegar a la pantalla de registro
+			//await Navigation.PushAsync(new RegistroPage());
+		}
 
-			if (count == 1)
-				CounterBtn.Text = $"Clicked {count} time";
-			else
-				CounterBtn.Text = $"Clicked {count} times";
-
-			SemanticScreenReader.Announce(CounterBtn.Text);
+		private async void OnSignInClicked(object sender, EventArgs e)
+		{
+			// Navegar a la pantalla de inicio de sesión
+			//await Navigation.PushAsync(new InicioSesionPage());
 		}
 	}
 
