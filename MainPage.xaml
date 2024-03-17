@@ -4,24 +4,81 @@
              x:Class="ChupyGPT.MainPage"
 			 BackgroundImageSource="fondo_1.png">
 
-	<Grid
-    VerticalOptions="Center"
-    HorizontalOptions="Center">
+	<Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*" />
+			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="*" />
-		</Grid.ColumnDefinitions>
 
-		<Image
-        Source="logo.png"
-        Grid.Row="0"
-        Grid.Column="0"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        Margin="0,-88,0,0"/>
+		<!-- Contenido principal -->
+		<Grid
+            Grid.Row="0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Image
+                Source="logo.png"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="0,0,0,0"/>
+			<Label
+				Grid.Row="1"
+				HorizontalOptions="Center"
+				VerticalOptions="Center"
+				HorizontalTextAlignment="Center"
+				VerticalTextAlignment="Center"
+				Margin="0,400,0,0"
+				FontSize="14"
+				FontFamily="WorkSansRegular">		
+				<Label.FormattedText>
+					<FormattedString>
+						<Span Text="¿Aún no eres parte del club?&#x0a;" FontAttributes="Bold" TextColor="White"/>
+						<Span Text="Únete ahora y empieza.&#x0a;" TextColor="White"/>
+						<Span Text="¿Eres ya member Eleve?&#x0a;" FontAttributes="Bold" TextColor="White"/>
+						<Span Text="Inicia sesión o únete ahora y te&#x0a; mostraremos todas las sesiones que&#x0a; has completado con nosotros." TextColor="White"/>
+
+					</FormattedString>
+				</Label.FormattedText>
+			</Label>
+		</Grid>
+		
+		<!-- Botones en la parte inferior -->
+		<StackLayout
+            Grid.Row="1"
+			Orientation="Horizontal"
+			VerticalOptions="End"
+			HorizontalOptions="Center"
+			Margin="0,0,0,30">
+			<Button
+				Text="ÚNETE AHORA"
+				BackgroundColor="Transparent"
+				TextColor="White"
+				FontFamily="WorkSansRegular"
+				FontAttributes="Bold"
+				FontSize="16"
+				WidthRequest="185"
+				HeightRequest="50"
+				CornerRadius="0"
+				Margin="0,0,10,0"/>
+			<Button
+				Text="INICIAR SESIÓN"
+				BackgroundColor="Transparent"
+				TextColor="White"
+				FontFamily="WorkSansRegular"
+				FontAttributes="Bold"
+				FontSize="16"
+				WidthRequest="190"
+				HeightRequest="50"
+				CornerRadius="0"
+				Margin="10,0,0,0"/>
+		</StackLayout>
 	</Grid>
-
-
 </ContentPage>
